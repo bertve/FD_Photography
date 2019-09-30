@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-title>Update</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="pin" (ngSubmit)='onSubmit()' class="container" fxLayoutGap="2%" fxLayout="column">
+
+      <mat-form-field>
+            <input matInput aria-label="name" placeholder="name" type="text" formControlName="name" required  />
+            <mat-error *ngIf="pin.get('link')['errors']?.required && 
+                pin.get('link').touched">
+              Is required
+            </mat-error>
+      </mat-form-field>
+      
+      <mat-form-field >
+        <input matInput aria-label="link" placeholder="link" type="text" formControlName="link" required />
+        <mat-error *ngIf="pin.get('link')['errors']?.required && 
+            pin.get('link').touched">
+          Is required
+        </mat-error>
+      </mat-form-field >
+      <button type='submit' mat-raised-button [disabled]='!pin.valid' color="primary">
+        add
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>

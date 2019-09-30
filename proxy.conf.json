@@ -1,0 +1,11 @@
+{
+    "/api": {
+      "target": {
+        "host": "pinapi.azurewebsites.net",
+        "protocol": "https:"
+      },
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "info"
+    }
+  }

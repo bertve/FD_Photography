@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "name": "Amsterdam",
+    "lat": 52,
+    "long": 4,
+    "images": [
+      {
+        "id": 1,
+        "path": "https://live.staticflickr.com/65535/40904871243_761f59bc4b_k.jpg"
+      },
+      {
+        "id": 26,
+        "path": "https://live.staticflickr.com/65535/32927243297_7c8a394aff_z.jpg"
+      },
+      {
+        "id": 27,
+        "path": "https://live.staticflickr.com/65535/47871130971_c2490b62c1_k.jpg"
+      }
+    ]
+  }
+  ,
+  {
+    "id": 4,
+    "name": "Honolulu",
+    "lat": 21.315603,
+    "long": -157.858093,
+    "images": [
+      {
+        "id": 7,
+        "path": "https://live.staticflickr.com/65535/47818986162_0bfc442a26_k.jpg"
+      },
+      {
+        "id": 8,
+        "path": "https://live.staticflickr.com/65535/46954989295_68923f089f_k.jpg"
+      },
+      {
+        "id": 9,
+        "path": "https://live.staticflickr.com/65535/47818986732_78568cd017_k.jpg"
+      }
+    ]
+ }
+]

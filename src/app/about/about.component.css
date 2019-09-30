@@ -1,0 +1,27 @@
+#fullPage{
+    margin-top:3.5em;
+
+}
+
+#imgBox{
+    margin-top: 1em;
+    margin-left: 1em;
+}
+.img{
+    border-radius: 0.2em;
+}
+#contactform{
+    margin-bottom:1em;
+}
+#textBox{
+    max-width: 50em;
+}
+
+#content{
+    margin-left:1em;
+    margin-right: 1em;
+}
+
+mat-card-header{
+    margin-left: 1em;
+}

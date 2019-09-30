@@ -1,0 +1,13 @@
+<div class="container" fxLayout="column"  >
+
+  <div fxFlex="100" fxLayoutAlign="center"><h2 class="mat-h2" id="title">{{pin.name}}</h2></div>
+
+  <div *ngIf="pin.name!='Select a pin'" class="container" fxLayout="row wrap" fxFlex="100"  fxLayoutAlign="space-around center" fxLayoutAlign.xs="center" fxLayoutGap="0.5%" >
+      <mat-card fxFlexAlign="stretch" fxLayoutAlign="center center"  fxFlex="32" fxFlex.xs="95" *ngFor="let img of pin.images" (click)="openDialog(img)">
+        <img data-cy="images" mat-card-image src={{img.src}}>
+      </mat-card>
+  </div>
+
+</div>
+
+

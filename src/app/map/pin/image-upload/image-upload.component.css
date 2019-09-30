@@ -1,0 +1,10 @@
+mat-card{
+    min-height: 12em;
+}
+
+button{
+    max-width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    color: white;
+}

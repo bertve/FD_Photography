@@ -1,0 +1,18 @@
+mat-card{
+    min-height: 17em;
+    margin-top: 1em;
+    
+}
+
+mat-card:hover{
+    border: 0.2em solid #607D8B;
+}
+
+#title{
+    margin-top: 1em;
+}
+
+.imageViewerContainer{
+    width: 100%;
+}
+
