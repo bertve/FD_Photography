@@ -1,16 +1,16 @@
 <mat-card id="fullPage" fxLayoutAlign="center" class="container" fxLayoutGap="2%" fxLayout="column">
-  
-  <mat-card-header fxFlex="95" fxLayoutAlign="start center" [ngStyle]="{'margin-bottom':'1em'}" >
+
+  <mat-card-header fxFlex="95" fxLayoutAlign="start center" [ngStyle]="{'margin-bottom':'1em'}">
     <mat-card-title>
       About me
     </mat-card-title>
     <img mat-card-avatar src="../../assets/images/about/avatar.jpg" alt="avatar frederic dhondt">
   </mat-card-header>
 
-  <div id="content" class="container" fxLayout="row" fxLayout.xs="column" fxLayoutGap="2%" >
+  <div id="content" class="container" fxLayout="row" fxLayout.xs="column" fxLayoutGap="2%">
     <mat-card-content id="imgBox" class="container" fxLayout="row wrap" fxFlex="40">
       <div fxFlex="40">
-          <img  class="img" mat-card-image src="../../assets/images/about/about_1_2.0.jpg" >
+        <img class="img" mat-card-image src="../../assets/images/about/about_1_2.0.jpg">
       </div>
       <div class="container" fxLayout="column" fxFlexOffset="14" fxFlex="40" fxLayoutGap="11%">
         <img class="img" mat-card-image src="../../assets/images/about/about_2.JPG">
@@ -20,71 +20,67 @@
 
     <mat-card-content id="textBox" fxFlex>
 
-      <p>Hi,
-        My name is Frederic D’hondt, I’m a 20-years old student based in Ghent, I’m very passionate about Photography
-        and I like to bump myself into countries to capture all the stunning places and habits. When I’m not home you’ll
-        most likely find me exploring the nature or the city centers.
+      <p>Hi, my name is Frederic D’hondt, I’m a 20-years old student based in Ghent. I’m very passionate about
+        Photography, and the things I like are bumping myself into countries to capture all the stunning places and
+        habits. When I’m not home, you’ll most likely find me exploring nature or cities.
       </p>
-      <p>My passion started in April 2018. My experience with photography was 0 %. But then I decided to plan a road
-        trip
-        to
-        Germany with 4 friends who already were very into photography. Quickly, I became involved with them.
-        So from that point my new passion raised. Nowadays, I’m capturing all my special travel moments.</p>
+      <p>My passion started in April 2018. I had 0% experience with photography, but then I decided to plan a road trip
+        to Germany with 4 friends who already were very into photography. Quickly, I became involved with them. So, from
+        that moment on, my new passion raised. Nowadays, I’m capturing all my special travel moments.</p>
       <p>
-        The thing that inspires me the most is walking or driving into endless to see that massive view. When I’m on
-        the road I barely never sleep because I live my days from sunrise to night. Photography gives me the power to
-        add value for myself. Escape the everyday life and travel are my priority affaires.
+        The thing that inspires me the most, is walking or driving into infinity, just to see that one extraordinary view. When I am on the road, I barely never sleep, because I live my days from sunrise till night. Photography gives me the power to add value to myself. As a result, escaping the everyday life and traveling are my priority affairs.
       </p>
       <p>
-        If you have any other questions feel free to ask. You can contact me here.
+        If you have any other questions, feel free to ask. You can contact me here.
       </p>
     </mat-card-content>
   </div>
 
-  <mat-card-footer fxLayoutAlign="center" fxLayoutAlign="space-around center"> 
+  <mat-card-footer fxLayoutAlign="center" fxLayoutAlign="space-around center">
     <mat-card id="contactform" fxFlex="95">
-        <mat-card-title>Contact</mat-card-title>
-        <mat-card-content>
-          <form [formGroup]="contact" (ngSubmit)='onSubmit()' class="container" fxLayoutGap="2%" fxLayout="column">
-            
-            <mat-form-field>
-              <input matInput aria-label="firstname" placeholder="Firstname" type="text" formControlName="firstname"
-                required />
-    
-              <mat-error *ngIf="contact.get('firstname')['errors']?.required && 
-                contact.get('firstname').touched">
-                Is required
-              </mat-error>
-    
-            </mat-form-field>
-            <mat-form-field>
-              <input matInput aria-label="name" placeholder="Name" type="text" formControlName="name" required />
-              <mat-error *ngIf="contact.get('name')['errors']?.required && 
-                contact.get('name').touched">
-                Is required
-              </mat-error>
-            </mat-form-field>
-    
-            <mat-form-field>
-              <input matInput aria-label="email" placeholder="Email" type="text" formControlName="email" required />
-              <mat-error *ngIf="contact.get('email')['errors']?.required && 
-                contact.get('email').touched">
-                Is required
-              </mat-error>
-            </mat-form-field>
-            <mat-form-field>
-              <textarea rows="10" matInput aria-label="message" placeholder="message" type="text" formControlName="message" required ></textarea>
+      <mat-card-title>Contact</mat-card-title>
+      <mat-card-content>
+        <form [formGroup]="contact" (ngSubmit)='onSubmit()' class="container" fxLayoutGap="2%" fxLayout="column">
 
-              <mat-error *ngIf="contact.get('message')['errors']?.required && 
+          <mat-form-field>
+            <input matInput aria-label="firstname" placeholder="Firstname" type="text" formControlName="firstname"
+              required />
+
+            <mat-error *ngIf="contact.get('firstname')['errors']?.required && 
+                contact.get('firstname').touched">
+              Is required
+            </mat-error>
+
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput aria-label="name" placeholder="Name" type="text" formControlName="name" required />
+            <mat-error *ngIf="contact.get('name')['errors']?.required && 
+                contact.get('name').touched">
+              Is required
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput aria-label="email" placeholder="Email" type="text" formControlName="email" required />
+            <mat-error *ngIf="contact.get('email')['errors']?.required && 
+                contact.get('email').touched">
+              Is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <textarea rows="10" matInput aria-label="message" placeholder="message" type="text"
+              formControlName="message" required></textarea>
+
+            <mat-error *ngIf="contact.get('message')['errors']?.required && 
                   contact.get('message').touched">
-                Is required
-              </mat-error>
-            </mat-form-field>
-            <button type='submit' mat-raised-button [disabled]='!contact.valid' color="primary">
-              Send
-            </button>
-          </form>
-        </mat-card-content>
+              Is required
+            </mat-error>
+          </mat-form-field>
+          <button type='submit' mat-raised-button [disabled]='!contact.valid' color="primary">
+            Send
+          </button>
+        </form>
+      </mat-card-content>
     </mat-card>
 
   </mat-card-footer>
@@ -92,18 +88,3 @@
 
 
 
-<!--
-      <div >
-    <form action="">
-      <label for="firstName">First name</label>
-      <input type="text">
-      <label for="lastName">Last name</label>
-      <input type="text">
-      <label for="email">E-mail</label>
-      <input type="text">
-      <label for="message">Message</label>
-      <input type="text">
-    </form>
-  </div>
-</div>
-  -->

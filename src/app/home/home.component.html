@@ -1,12 +1,13 @@
-<div class="container" fxLayout="column" fxLayoutWrap fxLayoutGap="0%" fxLayoutAlign="center" 
+<div class="container" fxLayout="column" fxLayoutWrap fxLayoutGap="0%" fxLayoutAlign="center"
   [ngStyle]="{'background-image': getBackgroundUrl(),background:'no-repeat','background-size': '100% 100vh',height:'100vh'}">
   <br>
   <div fxFlex="100%">
-    <mat-jumbotron  [ngStyle]="{'opacity':'0.6','margin-top':'2.2em'}"  imgURL="../../assets/images/logo/logo_fred_trans.png"> 
+    <mat-jumbotron [ngStyle]="{'opacity':'0.6','margin-top':'2.2em'}"
+      imgURL="../../assets/images/logo/logo_fred_trans.png">
       <mat-jumbotron-content>
         <h1 [ngStyle]="{color:'#000000'}" ngClass.xs="display-3 text-center" ngClass.sm="display-3">
           Welcome</h1>
-        <p [ngStyle]="{color:'#000000'}"  ngClass.xs="text-center">This is my travel photography
+        <p [ngStyle]="{color:'#000000'}" ngClass.xs="text-center">This is my travel photography
           blog.<br>I hope you get inspired.
         </p>
         <div fxLayout="row" fxLayout.xs="column" fxLayoutGap.xs="1rem" fxLayoutAlign="center center">
@@ -18,9 +19,12 @@
       </mat-jumbotron-content>
     </mat-jumbotron>
   </div>
-  <div  fxFlexFill fxFlex="100%" class="container" flexLayout="row"  fxLayoutGap="2%" fxLayoutAlign="end flex-end"  >
-          <a   href="https://www.instagram.com/fredericdhondt/"><i class="fab fa-instagram fa-3x fontawesome"></i></a>
-          <a   href="https://www.facebook.com/frederic.dhondt.3"><i class="fab fa-facebook-f fa-3x fontawesome"></i></a>
-          <a   href="https://www.linkedin.com/in/fredericdhondt/"><i class="fab fa-linkedin-in fa-3x fontawesome lastIcon"></i></a> 
+  <div fxFlexFill fxFlex="100%" class="container" flexLayout="row" fxLayoutGap="2%" fxLayoutAlign="end flex-end">
+    <a target='_blank' href="https://www.instagram.com/fredericdhondt/"><i
+        class="fab fa-instagram fa-3x fontawesome"></i></a>
+    <a target='_blank' href="https://www.facebook.com/frederic.dhondt.3"><i
+        class="fab fa-facebook-f fa-3x fontawesome"></i></a>
+    <a target='_blank' href="https://www.linkedin.com/in/fredericdhondt/"><i
+        class="fab fa-linkedin-in fa-3x fontawesome lastIcon"></i></a>
   </div>
 </div>
