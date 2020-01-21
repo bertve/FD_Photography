@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Pin } from './pin.model';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment.prod';
-import { map, catchError } from 'rxjs/operators';
+import { map, catchError, delay } from 'rxjs/operators';
 import { Observable, Subject, of } from 'rxjs';
 import { Photo } from 'src/app/photo.model';
 @Injectable({

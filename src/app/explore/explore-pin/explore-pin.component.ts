@@ -1,6 +1,5 @@
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 import { Pin } from 'src/app/pin.model';
-import { observable, Observable, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-explore-pin',
@@ -40,6 +39,17 @@ export class ExplorePinComponent implements OnInit {
 
   private scrollToBottom(){
     window.scrollTo(0,document.body.scrollHeight);
+  }
+
+  handleEvent(event) {
+    console.log(event);
+ 
+    switch (event.name) {
+      case 'close':
+        this.hideImageViewer();
+        console.log('imageviewer closed');
+        break;
+    }
   }
  
 }

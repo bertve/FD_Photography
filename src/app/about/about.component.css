@@ -2,6 +2,16 @@
     margin-top:3.5em;
 
 }
+.linkIcon{
+    color:black;
+    margin: 0.5em;
+    display:inline-block;
+
+}
+#iconContainer{
+    width: 100%;
+    text-align:center; 
+}
 
 #imgBox{
     margin-top: 1em;

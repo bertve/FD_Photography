@@ -13,7 +13,11 @@ export class HomeComponent implements OnInit {
   }
 getBackgroundUrl()
 {
-  return "url('../../assets/images/home.jpg')";
+  return "url('../../assets/images/home2.jpg')";
+}
+
+getSmallBackgroundUrl(){
+  return "url('../../assets/images/home3.jpg')";
 }
 
 }

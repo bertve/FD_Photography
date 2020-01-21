@@ -6,3 +6,7 @@ agm-map{
 app-explore-pin{
     min-height: 23em;
 }
+
+.loadingscreen{
+    min-height: 100vh;
+}

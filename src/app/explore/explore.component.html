@@ -1,27 +1,41 @@
-<div class="container" fxLayoutGap="0.5%" fxLayout="column">
-  <agm-map 
-          [latitude]="lat" 
-          [longitude]="long" 
-          [mapTypeId]='mapType' 
-          [zoom]='zoom' 
-          [minZoom]='1'
->                  <agm-marker 
-                          *ngFor="let pin of pins" 
-                          [latitude]="pin.lat" 
-                          [longitude]="pin.long"              
-                          [markerDraggable]="false" 
-                          [iconUrl]="'../../assets/images/pin/pin_black.png'"
-                          [animation]="pin.animation" 
-                          (markerClick)="selectPin($event)" 
-                          (mouseOver)="hoverOverPin(pin)"
-                          (mouseOut)="hoverOutPin(pin)">
-                  </agm-marker>
-  </agm-map>
-  <app-explore-pin 
-          fxFlex="100" 
-          [pin]="selectedPin"
-          [imageViewer]="imgViewer"
-          (ImageViewerOutput)="showImageViewer($event)"
-        >
-  </app-explore-pin>
+<div *ngIf="(pins$ | async) as pins; else loading">
+  <div class="container" fxLayoutGap="0.5%" fxLayout="column">
+    <agm-map
+      [latitude]="lat"
+      [longitude]="long"
+      [mapTypeId]="mapType"
+      [zoom]="zoom"
+      [minZoom]="1"
+    >
+      <agm-marker
+        *ngFor="let pin of (pins$ | async)"
+        [latitude]="pin.lat"
+        [longitude]="pin.long"
+        [markerDraggable]="false"
+        [iconUrl]="'../../assets/images/pin/pin_black.png'"
+        [animation]="pin.animation"
+        (markerClick)="selectPin($event)"
+        (mouseOver)="hoverOverPin(pin)"
+        (mouseOut)="hoverOutPin(pin)"
+      >
+      </agm-marker>
+    </agm-map>
+
+    <app-explore-pin
+      fxFlex="100"
+      [pin]="selectedPin"
+      [imageViewer]="imgViewer"
+      (ImageViewerOutput)="showImageViewer($event)"
+    >
+    </app-explore-pin>
+  </div>
 </div>
+<ng-template #loading  fxFlexAlign="auto" >
+  <div class="loadingscreen" fxLayout="row" fxLayoutAlign="space-around center">
+      <mat-spinner
+      mode="indeterminate"
+      aria-label="pins are loading"
+    ></mat-spinner>
+  </div>
+
+</ng-template>
