@@ -6,15 +6,19 @@
           src="../assets/images/logo/logo_fred.jpg">
       </a></mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item [routerLink]="['home']">
+      <a mat-list-item [routerLink]="['home']"
+      (click)="drawer.toggle()">
           <mat-icon>home</mat-icon><p>Home</p>
       </a>
-      <a mat-list-item [routerLink]="['explore']">
+      <a mat-list-item [routerLink]="['explore']"
+      (click)="drawer.toggle()">
           <mat-icon>explore</mat-icon>Explore
       </a>
-      <a mat-list-item [routerLink]="['about']">
+      <a mat-list-item [routerLink]="['about']"
+      (click)="drawer.toggle()">
           <mat-icon>face</mat-icon> About me</a>
-      <a mat-list-item [routerLink]="['admin']">
+      <a mat-list-item [routerLink]="['admin']"
+      (click)="drawer.toggle()">
           <mat-icon>build</mat-icon>Admin</a>
     </mat-nav-list>
   </mat-sidenav>
