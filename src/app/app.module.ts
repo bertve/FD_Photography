@@ -23,6 +23,7 @@ import { ExploreComponent } from './explore/explore.component';
 import { ExplorePinComponent } from './explore/explore-pin/explore-pin.component';
 import { ImageViewerModule } from "ngx-image-viewer";
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { YoutubeComponent } from './youtube/youtube.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     PinDeleteComponent,
     DialogComponent,
     ExploreComponent,
-    ExplorePinComponent
+    ExplorePinComponent,
+    YoutubeComponent
   ],
   imports: [
     AdminModule,

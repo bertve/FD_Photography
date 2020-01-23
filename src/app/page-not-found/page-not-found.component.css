@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap');
+p{
+    font-family: 'Bungee Shade', cursive;
+    font-size: 3em;
+    text-align: center;
+}
+
+.pageNotFoundContainer{
+    min-height: 100vh;
+}
+

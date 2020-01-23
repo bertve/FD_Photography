@@ -28,7 +28,8 @@
               "src/theme.scss"
 
             ],
-            "scripts": [],
+            "scripts": [
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
