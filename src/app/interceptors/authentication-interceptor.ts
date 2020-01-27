@@ -6,7 +6,7 @@ import {
     HttpEvent
   } from '@angular/common/http';
   import { Injectable } from '@angular/core';
-  import { AuthenticationService } from '../admin/authentication.service';
+  import { AuthenticationService } from '../views/admin/authentication.service';
   import { Observable } from 'rxjs';
   
   @Injectable()

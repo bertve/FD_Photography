@@ -1,15 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from '../views/admin/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
-//import { RouterModule, Routes } from '@angular/router';
-import { MaterialModule } from '../material/material.module';
+import { MaterialModule } from './material.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AdminComponent } from'./admin.component';
-/*const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-];
-*/
+import { AdminComponent } from'../views/admin/admin.component';
+
 @NgModule({
   declarations: [LoginComponent,AdminComponent],
   imports: [
@@ -17,7 +13,6 @@ import { AdminComponent } from'./admin.component';
     MaterialModule,
     ReactiveFormsModule,
     HttpClientModule,
-    //RouterModule.forChild(routes)
   ]
 })
 export class AdminModule {}

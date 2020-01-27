@@ -1,8 +1,8 @@
 import { Component, OnInit,Input,Output,EventEmitter} from '@angular/core';
-import { Pin } from 'src/app/pin.model';
-import { Photo } from 'src/app/photo.model';
+import { Pin } from 'src/app/models/pin.model';
+import { Photo } from 'src/app/models/photo.model';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
-import { DialogComponent } from 'src/app/dialog/dialog.component';
+import { DialogComponent } from 'src/app/views/dialog/dialog.component';
 
 export interface DialogData {
   title: string;

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
-import { Pin } from 'src/app/pin.model';
+import { Pin } from 'src/app/models/pin.model';
 import { FormGroup, FormControl,Validators,FormBuilder} from '@angular/forms';
-import { Photo } from 'src/app/photo.model';
+import { Photo } from 'src/app/models/photo.model';
 @Component(
   {
   selector: 'app-image-upload',

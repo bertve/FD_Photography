@@ -1,5 +1,5 @@
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
-import { Pin } from 'src/app/pin.model';
+import { Pin } from 'src/app/models/pin.model';
 
 @Component({
   selector: 'app-explore-pin',

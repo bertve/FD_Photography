@@ -13,7 +13,7 @@ import {
   MatProgressSpinnerModule,
   MatToolbarModule,
   MatSidenavModule,
-  MatDialog
+  MatDialogModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -38,6 +38,7 @@ import { MatJumbotronModule } from '@angular-material-extensions/jumbotron';
     MatToolbarModule,
     MatSidenavModule,
     MatJumbotronModule.forRoot(),
+    MatDialogModule
   ],
   exports: [
     MatButtonModule,
@@ -55,6 +56,7 @@ import { MatJumbotronModule } from '@angular-material-extensions/jumbotron';
     MatToolbarModule,
     MatSidenavModule,
     MatJumbotronModule,
+    MatDialogModule
   ],
 })
 export class MaterialModule {}

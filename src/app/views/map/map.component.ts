@@ -1,9 +1,9 @@
 import { Component, OnInit, Input, Output, EventEmitter, SystemJsNgModuleLoader } from '@angular/core';
-import { Pin } from '../pin.model';
-import { PinDataService } from '../pin-data.service';
+import { Pin } from '../../models/pin.model';
+import { PinDataService } from '../../services/pin/pin-data.service';
 import { Observable } from 'rxjs';
 import {} from 'googlemaps';
-import { Photo } from 'src/app/photo.model';
+import { Photo } from 'src/app/models/photo.model';
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',

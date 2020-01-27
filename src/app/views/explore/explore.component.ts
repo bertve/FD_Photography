@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Pin } from '../pin.model';
-import { PinDataService } from '../pin-data.service';
+import { Pin } from '../../models/pin.model';
+import { PinDataService } from '../../services/pin/pin-data.service';
 import { Observable } from 'rxjs';
 import {} from 'googlemaps';
 
