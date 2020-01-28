@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ImageViewerModule } from "ngx-image-viewer";
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { YouTubePlayerModule } from '@angular/youtube-player';
 import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
@@ -14,13 +13,11 @@ import { AgmCoreModule } from '@agm/core';
     }),
     ImageViewerModule.forRoot(),
     AngularFontAwesomeModule,
-    YouTubePlayerModule
   ],
   exports: [
     AgmCoreModule,
     ImageViewerModule,
     AngularFontAwesomeModule,
-    YouTubePlayerModule
   ]
 })
 export class ExternalModule { }

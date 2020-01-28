@@ -1,4 +1,4 @@
-<div *ngIf="(pins$ | async) as pins; else loading">
+<div *ngIf="(pins$ | async) as pins; else loading" id="exploreContainer">
   <div class="container" fxLayoutGap="0.5%" fxLayout="column">
     <agm-map
       [latitude]="lat"

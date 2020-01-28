@@ -20,6 +20,7 @@ import { DialogComponent } from './views/dialog/dialog.component';
 import { ExploreComponent } from './views/explore/explore.component';
 import { ExplorePinComponent } from './views/explore/explore-pin/explore-pin.component';
 import { ExternalModule } from './modules/external.module';
+import { VideoComponent } from './views/video/video.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { ExternalModule } from './modules/external.module';
     DialogComponent,
     ExploreComponent,
     ExplorePinComponent,
+    VideoComponent
   ],
   imports: [
     AdminModule,

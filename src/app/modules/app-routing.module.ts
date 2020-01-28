@@ -8,12 +8,15 @@ import { MapComponent } from '../views/map/map.component';
 import { PageNotFoundComponent } from '../views/page-not-found/page-not-found.component';
 import { AuthGuard } from '../views/admin/auth.guard';
 import { ExploreComponent } from '../views/explore/explore.component';
+import { VideoComponent } from '../views/video/video.component';
+
 const appRoutes: Routes = [
   {path:'home',component: HomeComponent},
   {path:'explore', component: ExploreComponent},
   {path:'about',component: AboutComponent},
   {path:'admin',component: AdminComponent},
   {path:'admin/editMap',canActivate: [AuthGuard],component:MapComponent},
+  {path:'video',component: VideoComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: '**', component: PageNotFoundComponent}
 ];

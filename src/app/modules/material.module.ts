@@ -18,6 +18,7 @@ import {
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatJumbotronModule } from '@angular-material-extensions/jumbotron';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 @NgModule({
   declarations: [],
@@ -38,7 +39,8 @@ import { MatJumbotronModule } from '@angular-material-extensions/jumbotron';
     MatToolbarModule,
     MatSidenavModule,
     MatJumbotronModule.forRoot(),
-    MatDialogModule
+    MatDialogModule,
+    YouTubePlayerModule
   ],
   exports: [
     MatButtonModule,
@@ -56,7 +58,8 @@ import { MatJumbotronModule } from '@angular-material-extensions/jumbotron';
     MatToolbarModule,
     MatSidenavModule,
     MatJumbotronModule,
-    MatDialogModule
+    MatDialogModule,
+    YouTubePlayerModule
   ],
 })
 export class MaterialModule {}

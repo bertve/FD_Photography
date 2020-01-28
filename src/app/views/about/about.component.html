@@ -16,7 +16,7 @@
         <img class="img" mat-card-image src="../../assets/images/about/about_2.JPG">
         <img class="img" mat-card-image src="../../assets/images/about/about_3.jpg">
       </div>
-      <div id="iconContainer" fxFlex="100">
+      <div id="iconContainer" >
           <a href="https://www.youtube.com/channel/UCyi9uem9oeu7RNELpzOqeZA"
   ><i class="fab fa-youtube fa-3x linkIcon"></i
 ></a>
@@ -33,7 +33,10 @@
 
     </mat-card-content>
 
-    <mat-card-content id="textBox" fxFlex>
+    <mat-card-content id="textBox" 
+    fxFlex
+    [ngStyle.xl]="{'font-size': '1.5 em'}"
+    [ngStyle.md]="{'font-size': '1 em'}">
 
       <p>Hi, my name is Frederic D’hondt, I’m a 20-years old student based in Ghent. I’m very passionate about
         Photography, and the things I like are bumping myself into countries to capture all the stunning places and

@@ -1,5 +1,5 @@
 div{
-    min-height: 47em;
+    min-height: 100vh;
 }
 mat-card{
     min-width: 20em;

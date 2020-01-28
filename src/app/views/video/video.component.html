@@ -1,3 +1,11 @@
-<p>
-  video works!
-</p>
+<mat-card fxLayoutAlign="center" class="container"
+[ngStyle]="{'padding-top':'7vh' }"
+[ngStyle.xs]="{'padding-top':'8vh' }">
+  <youtube-player
+    videoId="bUxbVybCfoA"
+    [height]="getVideoHeight()"
+    [width]="getVideoWidth()"
+    suggestedQuality="highres"
+  >
+  </youtube-player>
+</mat-card>
