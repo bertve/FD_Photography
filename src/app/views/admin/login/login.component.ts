@@ -8,6 +8,7 @@ import {
   Validators
 } from '@angular/forms';
 import { HttpErrorResponse } from '@angular/common/http';
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material';
 
 function comparePasswords(control: AbstractControl): { [key: string]: any } {
   const password = control.get('password');
@@ -24,12 +25,13 @@ function comparePasswords(control: AbstractControl): { [key: string]: any } {
 })
 export class LoginComponent implements OnInit {
   public admin : FormGroup;
-  public errorMsg: string;
+  public errorMsg: string = null;
 
   constructor(
     private authService: AuthenticationService,
     private router: Router,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private _snackBar  : MatSnackBar
   ) {}
 
   ngOnInit() {
@@ -37,6 +39,12 @@ export class LoginComponent implements OnInit {
       username: ['', [Validators.required,Validators.email]],
       password: ['', Validators.required]
     });
+  }
+
+  showErrorSnackBar(){
+    let config = new MatSnackBarConfig();
+    config.duration = 5000;
+    this._snackBar.open(this.errorMsg,'Retry',config);
   }
 
   onSubmit() {
@@ -54,18 +62,17 @@ export class LoginComponent implements OnInit {
             }
           } else {
             this.errorMsg = `Could not login`;
+            this.showErrorSnackBar();
           }
         },
         (err: HttpErrorResponse) => {
           console.log(err);
           if (err.error instanceof Error) {
-            this.errorMsg = `Error while trying to login user ${
-              this.admin.value.username
-            }: ${err.error.message}`;
+            this.errorMsg = `Error while trying to login`;
+            this.showErrorSnackBar();
           } else {
-            this.errorMsg = `Error ${err.status} while trying to login user ${
-              this.admin.value.username
-            }: ${err.error}`;
+            this.errorMsg = `Error ${err.status} while trying to login`;
+            this.showErrorSnackBar();
           }
         }
       );

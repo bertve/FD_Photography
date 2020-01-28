@@ -13,7 +13,8 @@ import {
   MatProgressSpinnerModule,
   MatToolbarModule,
   MatSidenavModule,
-  MatDialogModule
+  MatDialogModule,
+  MatSnackBarModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -40,7 +41,8 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     MatSidenavModule,
     MatJumbotronModule.forRoot(),
     MatDialogModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    MatSnackBarModule
   ],
   exports: [
     MatButtonModule,
@@ -59,7 +61,8 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     MatSidenavModule,
     MatJumbotronModule,
     MatDialogModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    MatSnackBarModule
   ],
 })
 export class MaterialModule {}

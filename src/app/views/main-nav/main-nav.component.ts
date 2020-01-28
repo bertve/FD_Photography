@@ -18,9 +18,7 @@ export class MainNavComponent {
   constructor(private breakpointObserver: BreakpointObserver) {}
 
   myDrawerToggle(drawer){
-    console.log(drawer);
     if(window.innerWidth < 600){
-      console.log('toggled');
       drawer.toggle();
     }
   }
