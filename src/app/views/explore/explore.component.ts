@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Pin } from '../../models/pin.model';
 import { PinDataService } from '../../services/pin/pin-data.service';
 import { Observable } from 'rxjs';
 import {} from 'googlemaps';
+import { AgmMap } from '@agm/core';
 
 @Component({
   selector: 'app-explore',
@@ -58,6 +59,17 @@ export class ExploreComponent implements OnInit {
 
   public showImageViewer(bool){
     this.imgViewer = bool;
+  }
+
+  public getPinIcon(map : AgmMap): string{
+    console.log(map);
+    if(map.zoom > 3){
+      return "../../assets/images/pin/pin_black.png"
+    }
+    if(map.zoom > 2){
+      return "../../assets/images/pin/pin_black_24.png";
+    }
+    return "../../assets/images/pin/pin_black_16.png";
   }
 
 }

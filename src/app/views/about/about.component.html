@@ -66,7 +66,7 @@
 
             <mat-error *ngIf="contact.get('firstname')['errors']?.required && 
                 contact.get('firstname').touched">
-              Is required
+              Is required            
             </mat-error>
 
           </mat-form-field>
@@ -84,6 +84,10 @@
                 contact.get('email').touched">
               Is required
             </mat-error>
+            <mat-error *ngIf="!contact.valid && !contact.get('email')['errors']?.required && 
+            contact.get('email').touched">
+            Must be Email address
+          </mat-error>
           </mat-form-field>
           <mat-form-field>
             <textarea rows="10" matInput aria-label="message" placeholder="message" type="text"

@@ -13,7 +13,16 @@
             aria-label="email"
             data-cy="email"
             formControlName="username"
+            required
           />
+          <mat-error *ngIf="admin.get('username')['errors']?.required && 
+          admin.get('username').touched">
+        Is required
+      </mat-error>
+      <mat-error *ngIf="!admin.valid && !admin.get('username')['errors']?.required && 
+      admin.get('username').touched">
+    Must be Email address
+  </mat-error>
         </mat-form-field>
 
         <mat-form-field>
@@ -24,7 +33,12 @@
             aria-label="password"
             data-cy="password"
             formControlName="password"
+            required
           />
+          <mat-error *ngIf="admin.get('password')['errors']?.required && 
+          admin.get('password').touched">
+        Is required
+      </mat-error>
         </mat-form-field>
       </mat-card-content>
       <mat-card-actions fxLayout="row" fxLayoutAlign="center center">
@@ -34,6 +48,7 @@
           type="submit"
           color="primary"  
           data-cy="loginButton"
+          [disabled]='!admin.valid'
         >
           Login
         </button>

@@ -11,17 +11,17 @@
           <mat-icon>home</mat-icon><p>Home</p>
       </a>
       <a mat-list-item [routerLink]="['explore']"
-      (click)="drawer.toggle()">
+      (click)="myDrawerToggle(drawer)">
           <mat-icon>explore</mat-icon>Explore
       </a>
       <a mat-list-item [routerLink]="['video']"
-      (click)="drawer.toggle()">
+      (click)="myDrawerToggle(drawer)">
       <mat-icon>movie</mat-icon>Video</a>
       <a mat-list-item [routerLink]="['about']"
-      (click)="drawer.toggle()">
+      (click)="myDrawerToggle(drawer)">
           <mat-icon>face</mat-icon> About me</a>
       <a mat-list-item [routerLink]="['admin']"
-      (click)="drawer.toggle()">
+      (click)="myDrawerToggle(drawer)">
           <mat-icon>build</mat-icon>Admin</a>
     </mat-nav-list>
   </mat-sidenav>

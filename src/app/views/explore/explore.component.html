@@ -1,6 +1,7 @@
 <div *ngIf="(pins$ | async) as pins; else loading" id="exploreContainer">
   <div class="container" fxLayoutGap="0.5%" fxLayout="column">
     <agm-map
+      #map
       [latitude]="lat"
       [longitude]="long"
       [mapTypeId]="mapType"
@@ -12,7 +13,7 @@
         [latitude]="pin.lat"
         [longitude]="pin.long"
         [markerDraggable]="false"
-        [iconUrl]="'../../assets/images/pin/pin_black.png'"
+        [iconUrl]="getPinIcon(map)"
         [animation]="pin.animation"
         (markerClick)="selectPin($event)"
         (mouseOver)="hoverOverPin(pin)"
