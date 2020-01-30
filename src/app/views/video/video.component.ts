@@ -19,11 +19,14 @@ export class VideoComponent implements OnInit {
   }
 
   getVideoHeight(){
-    return this.height * 0.91;
+    
+    return this.height * 0.8;
   }
 
   getVideoWidth(){
-    return this.width * 0.9;
+    if(600 <= this.width && this.width <820 )
+      return this.width * 0.6;
+    return this.width * 0.8;
   }
 
   @HostListener('window:resize', ['$event'])
