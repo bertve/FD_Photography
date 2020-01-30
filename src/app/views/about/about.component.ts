@@ -23,5 +23,15 @@ export class AboutComponent implements OnInit {
     window.open(`mailto:frederic.dhondt@hotmail.com?subject=contact message photography blog from ${this.contact.value.firstname} ${this.contact.value.name}&body=${this.contact.value.message}`);
   }
 
+  getFontSizeAbout() :String{
+    if(window.innerWidth < 480){
+     return "0.8em";
+    }
+    if(window.innerWidth < 800){
+      return "1em"
+    }
+      return "1.2em";
+  }
+
 
 }
